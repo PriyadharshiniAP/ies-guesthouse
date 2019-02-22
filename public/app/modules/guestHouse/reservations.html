@@ -1,0 +1,106 @@
+
+<ol class="breadcrumb border-bottom">
+  <li class="module_name flex-grow-1 mr-2">LAUDEA: Module Name <a href="adaa" id="moduleversion" class="version dropdown-toggle px-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v2.0.2 </a>
+    <div class="dropdown-menu" aria-labelledby="moduleversion">
+      <h6 class="dropdown-header">v2.0.2 Release Notes</h6>
+      <div class="dropdown-divider"></div>
+      <ul class="list-group my-0">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB HOME</a> </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB PARENT</a> </li>
+  <li class="breadcrumb-item active">BREADCRUMB CHILD</li>
+</ol><section class="content">
+    
+    <div class="element-wrapper">
+      <h1 class="element-title">Reservations</h1>
+      <div class="element-actions">
+        <button class="btn btn-sm btn-success" data-toggle="modal" data-target="#addRow"><i class="la la-plus-circle"></i>New Reservation</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="table-container">
+        <div class="table-container">
+          <div class="table-header">
+            <div class="standard-table-collapsible-header px-0">
+              <div class="row mx-0">
+                <div class="col-md-10"></div>
+                <div class="col-md-2 text-right border-right">
+                  <div class="input-group input-group-sm py-2">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button"> <i class="la la-search mr-0"></i> </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-body">
+          <table class="standard-table table-border">
+            <thead>
+              <tr>
+                <th class="sort ascending">Reservation #</th>
+                <th>Arrival</th>
+                <th>Departure</th>
+                <th>Guest Name</th>
+                <th>Adults</th>
+                <th>Children</th>
+                <th>Requested Rooms</th>
+                <th>Status</th>
+                <th class="text-center action3">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="request in roomrequests">
+                <td>1234</td>
+                <td>{{request.datefrom}}</td>
+                <td>{{request.dateto}}</td>
+                <td>{{request.fname}}{{request.lname}}</td>
+                <td>{{request.adult}}</td>
+                <td>{{request.Child}}</td>
+                <td>Deluxe - 1<br>
+                  Standard - 1</td>
+                <td><span class="badge badge-pill badge-danger">Pending</span></td>
+                <td data-title="Action" class="action"><div class="input-group">
+                    <div class="input-group-append"><a class="btn btn-table btn-sm rounded-0 py-0"> <i class="la la-edit"></i> Edit </a> <a class="btn btn-table btn-sm rounded-0 py-0"> <i class="la la-trash"></i> Delete </a> <a class="more-action"><i class="la la-ellipsis-v"></i> </a> </div>
+                  </div></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="standard-table-footer">
+            <div class="row">
+              <div class="col-sm-4">
+                <select class="per-page">
+                  <option>15</option>
+                </select>
+                <span>per page</span> </div>
+              <div class="col-sm-8 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-double-left mr-0"></span></button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-left mr-0"></span></button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm">1</button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm">2</button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm">3</button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm">4</button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm">5</button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-right mr-0"></span></button>
+                  <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-double-right mr-0"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+ 
+</section>

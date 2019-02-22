@@ -1,0 +1,199 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:12
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-24h-clock:before { content: "\f100"; }
+.flaticon-24h-telephone:before { content: "\f101"; }
+.flaticon-alarm-clock:before { content: "\f102"; }
+.flaticon-bathroom-sink:before { content: "\f103"; }
+.flaticon-bathtub-with-water-dropping:before { content: "\f104"; }
+.flaticon-beer-mug:before { content: "\f105"; }
+.flaticon-black-and-white-credit-cards:before { content: "\f106"; }
+.flaticon-bottle-in-bucket:before { content: "\f107"; }
+.flaticon-bowling-pin-and-ball:before { content: "\f108"; }
+.flaticon-briefcase-with-plus-symbol:before { content: "\f109"; }
+.flaticon-burger-on-plate:before { content: "\f10a"; }
+.flaticon-cigar-with-smoke:before { content: "\f10b"; }
+.flaticon-closed-sign:before { content: "\f10c"; }
+.flaticon-clothes-hanger:before { content: "\f10d"; }
+.flaticon-clothes-iron:before { content: "\f10e"; }
+.flaticon-cocktail-glass:before { content: "\f10f"; }
+.flaticon-coffee-pot:before { content: "\f110"; }
+.flaticon-computer-with-wifi-signal:before { content: "\f111"; }
+.flaticon-desk-bell:before { content: "\f112"; }
+.flaticon-digital-phone:before { content: "\f113"; }
+.flaticon-dollar-bills:before { content: "\f114"; }
+.flaticon-door-hanger:before { content: "\f115"; }
+.flaticon-door-key:before { content: "\f116"; }
+.flaticon-double-bed:before { content: "\f117"; }
+.flaticon-down-left-arrow:before { content: "\f118"; }
+.flaticon-elevator-braille-button:before { content: "\f119"; }
+.flaticon-fast-food-burger-and-drink:before { content: "\f11a"; }
+.flaticon-fire-extinguisher:before { content: "\f11b"; }
+.flaticon-food-tray-with-cover:before { content: "\f11c"; }
+.flaticon-golf-green:before { content: "\f11d"; }
+.flaticon-gym-dumbbell:before { content: "\f11e"; }
+.flaticon-hair-dryer:before { content: "\f11f"; }
+.flaticon-hair-scissors-and-comb:before { content: "\f120"; }
+.flaticon-hotel-bellhop:before { content: "\f121"; }
+.flaticon-hotel-coat-check:before { content: "\f122"; }
+.flaticon-hotel-do-not-disturb-door-hanger:before { content: "\f123"; }
+.flaticon-hotel-door-key:before { content: "\f124"; }
+.flaticon-hotel-elevator-sign:before { content: "\f125"; }
+.flaticon-hotel-five-stars-sign:before { content: "\f126"; }
+.flaticon-hotel-food-cart:before { content: "\f127"; }
+.flaticon-hotel-front-view:before { content: "\f128"; }
+.flaticon-hotel-keycard:before { content: "\f129"; }
+.flaticon-hotel-left-luggage:before { content: "\f12a"; }
+.flaticon-hotel-luggage-trolley:before { content: "\f12b"; }
+.flaticon-hotel-maid:before { content: "\f12c"; }
+.flaticon-hotel-receptionist:before { content: "\f12d"; }
+.flaticon-hotel-receptionist-1:before { content: "\f12e"; }
+.flaticon-hotel-single-bed:before { content: "\f12f"; }
+.flaticon-hotel-tv:before { content: "\f130"; }
+.flaticon-ice-cream-cone:before { content: "\f131"; }
+.flaticon-information-sign:before { content: "\f132"; }
+.flaticon-no-cameras-sign:before { content: "\f133"; }
+.flaticon-no-smoking-sign:before { content: "\f134"; }
+.flaticon-open-sign:before { content: "\f135"; }
+.flaticon-parking-sign:before { content: "\f136"; }
+.flaticon-pet-transport-box:before { content: "\f137"; }
+.flaticon-photo-camera:before { content: "\f138"; }
+.flaticon-plunger-and-brush:before { content: "\f139"; }
+.flaticon-pool-eight-ball:before { content: "\f13a"; }
+.flaticon-restaurant-sign:before { content: "\f13b"; }
+.flaticon-soup-bowl:before { content: "\f13c"; }
+.flaticon-sun-umbrella-with-beach-chair:before { content: "\f13d"; }
+.flaticon-surveillance-camera:before { content: "\f13e"; }
+.flaticon-sweeping-broom:before { content: "\f13f"; }
+.flaticon-swimming-pool-sign:before { content: "\f140"; }
+.flaticon-taxi-front-view:before { content: "\f141"; }
+.flaticon-tennis-racket-and-ball:before { content: "\f142"; }
+.flaticon-thermometer-cold-temperature:before { content: "\f143"; }
+.flaticon-thermometer-high-temperature:before { content: "\f144"; }
+.flaticon-three-star-hotel-sign:before { content: "\f145"; }
+.flaticon-toilet-sign:before { content: "\f146"; }
+.flaticon-toilet-sign-1:before { content: "\f147"; }
+.flaticon-toothpaste-and-toothbrush:before { content: "\f148"; }
+.flaticon-towel-on-hanger:before { content: "\f149"; }
+.flaticon-towel-on-hanger-1:before { content: "\f14a"; }
+.flaticon-travelling-luggage:before { content: "\f14b"; }
+.flaticon-two-semicircles:before { content: "\f14c"; }
+.flaticon-up-right-arrow:before { content: "\f14d"; }
+.flaticon-waiter-with-tray:before { content: "\f14e"; }
+.flaticon-washing-machine:before { content: "\f14f"; }
+    
+    $font-Flaticon-24h-clock: "\f100";
+    $font-Flaticon-24h-telephone: "\f101";
+    $font-Flaticon-alarm-clock: "\f102";
+    $font-Flaticon-bathroom-sink: "\f103";
+    $font-Flaticon-bathtub-with-water-dropping: "\f104";
+    $font-Flaticon-beer-mug: "\f105";
+    $font-Flaticon-black-and-white-credit-cards: "\f106";
+    $font-Flaticon-bottle-in-bucket: "\f107";
+    $font-Flaticon-bowling-pin-and-ball: "\f108";
+    $font-Flaticon-briefcase-with-plus-symbol: "\f109";
+    $font-Flaticon-burger-on-plate: "\f10a";
+    $font-Flaticon-cigar-with-smoke: "\f10b";
+    $font-Flaticon-closed-sign: "\f10c";
+    $font-Flaticon-clothes-hanger: "\f10d";
+    $font-Flaticon-clothes-iron: "\f10e";
+    $font-Flaticon-cocktail-glass: "\f10f";
+    $font-Flaticon-coffee-pot: "\f110";
+    $font-Flaticon-computer-with-wifi-signal: "\f111";
+    $font-Flaticon-desk-bell: "\f112";
+    $font-Flaticon-digital-phone: "\f113";
+    $font-Flaticon-dollar-bills: "\f114";
+    $font-Flaticon-door-hanger: "\f115";
+    $font-Flaticon-door-key: "\f116";
+    $font-Flaticon-double-bed: "\f117";
+    $font-Flaticon-down-left-arrow: "\f118";
+    $font-Flaticon-elevator-braille-button: "\f119";
+    $font-Flaticon-fast-food-burger-and-drink: "\f11a";
+    $font-Flaticon-fire-extinguisher: "\f11b";
+    $font-Flaticon-food-tray-with-cover: "\f11c";
+    $font-Flaticon-golf-green: "\f11d";
+    $font-Flaticon-gym-dumbbell: "\f11e";
+    $font-Flaticon-hair-dryer: "\f11f";
+    $font-Flaticon-hair-scissors-and-comb: "\f120";
+    $font-Flaticon-hotel-bellhop: "\f121";
+    $font-Flaticon-hotel-coat-check: "\f122";
+    $font-Flaticon-hotel-do-not-disturb-door-hanger: "\f123";
+    $font-Flaticon-hotel-door-key: "\f124";
+    $font-Flaticon-hotel-elevator-sign: "\f125";
+    $font-Flaticon-hotel-five-stars-sign: "\f126";
+    $font-Flaticon-hotel-food-cart: "\f127";
+    $font-Flaticon-hotel-front-view: "\f128";
+    $font-Flaticon-hotel-keycard: "\f129";
+    $font-Flaticon-hotel-left-luggage: "\f12a";
+    $font-Flaticon-hotel-luggage-trolley: "\f12b";
+    $font-Flaticon-hotel-maid: "\f12c";
+    $font-Flaticon-hotel-receptionist: "\f12d";
+    $font-Flaticon-hotel-receptionist-1: "\f12e";
+    $font-Flaticon-hotel-single-bed: "\f12f";
+    $font-Flaticon-hotel-tv: "\f130";
+    $font-Flaticon-ice-cream-cone: "\f131";
+    $font-Flaticon-information-sign: "\f132";
+    $font-Flaticon-no-cameras-sign: "\f133";
+    $font-Flaticon-no-smoking-sign: "\f134";
+    $font-Flaticon-open-sign: "\f135";
+    $font-Flaticon-parking-sign: "\f136";
+    $font-Flaticon-pet-transport-box: "\f137";
+    $font-Flaticon-photo-camera: "\f138";
+    $font-Flaticon-plunger-and-brush: "\f139";
+    $font-Flaticon-pool-eight-ball: "\f13a";
+    $font-Flaticon-restaurant-sign: "\f13b";
+    $font-Flaticon-soup-bowl: "\f13c";
+    $font-Flaticon-sun-umbrella-with-beach-chair: "\f13d";
+    $font-Flaticon-surveillance-camera: "\f13e";
+    $font-Flaticon-sweeping-broom: "\f13f";
+    $font-Flaticon-swimming-pool-sign: "\f140";
+    $font-Flaticon-taxi-front-view: "\f141";
+    $font-Flaticon-tennis-racket-and-ball: "\f142";
+    $font-Flaticon-thermometer-cold-temperature: "\f143";
+    $font-Flaticon-thermometer-high-temperature: "\f144";
+    $font-Flaticon-three-star-hotel-sign: "\f145";
+    $font-Flaticon-toilet-sign: "\f146";
+    $font-Flaticon-toilet-sign-1: "\f147";
+    $font-Flaticon-toothpaste-and-toothbrush: "\f148";
+    $font-Flaticon-towel-on-hanger: "\f149";
+    $font-Flaticon-towel-on-hanger-1: "\f14a";
+    $font-Flaticon-travelling-luggage: "\f14b";
+    $font-Flaticon-two-semicircles: "\f14c";
+    $font-Flaticon-up-right-arrow: "\f14d";
+    $font-Flaticon-waiter-with-tray: "\f14e";
+    $font-Flaticon-washing-machine: "\f14f";

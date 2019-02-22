@@ -1,0 +1,726 @@
+<ol class="breadcrumb border-bottom">
+  <li class="module_name flex-grow-1 mr-2">LAUDEA: Module Name <a href="adaa" id="moduleversion"
+      class="version dropdown-toggle px-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v2.0.2
+    </a>
+    <div class="dropdown-menu" aria-labelledby="moduleversion">
+      <h6 class="dropdown-header">v2.0.2 Release Notes</h6>
+      <div class="dropdown-divider"></div>
+      <ul class="list-group my-0">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB HOME</a> </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB PARENT</a> </li>
+  <li class="breadcrumb-item active">BREADCRUMB CHILD</li>
+</ol>
+<section class="content">
+  <div class="element-wrapper mb-0">
+    <h1 class="element-title" ng-if="detailsdataMode =='ADD'">Add Guesthouse</h1>
+    <h1 class="element-title" ng-if="detailsdataMode =='Edit'">Edit Guesthouse</h1>
+    <!--<div class="element-actions"> <a class="btn btn-action btn-sm" href="#"> <i class="la la-plus-circle"></i> <span>Action
+              Button</span> </a> </div>-->
+  </div>
+  <div class="card mt-3">
+    <ul class="nav nav-tabs nav-tabs-highlight mb-0">
+      <li class="nav-item"><a href="javascript:void(0)" class="nav-link active " data-toggle="tab"
+          data-target="#information" role="tab">Basic Information</a></li>
+      <li class="nav-item"><a href="javascript:void(0)" class="nav-link" data-toggle="tab" data-target="#room"
+          role="tab" ng-if="detailsdataMode=='Edit'" ng-click=" loadInitialRoomType(guestHouseId);">Room
+          Types</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link" data-toggle="tab" data-target="#room"
+            role="tab"  ng-disabled="!enableEditRoomDetails" ng-if="detailsdataMode=='ADD'">Room
+            Types</a></li>
+      <li class="nav-item"><a href="javascript:void(0)" class="nav-link " data-toggle="tab" data-target="#floors"
+          role="tab"  ng-if="detailsdataMode=='ADD'"ng-click="loadFloorsandRooms()">Floors & Rooms</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link " data-toggle="tab" data-target="#floors"
+            role="tab"  ng-if="detailsdataMode=='Edit'"ng-click="loadFloorsandRooms()">Floors & Rooms</a></li>
+      <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link" data-toggle="tab" data-target="#policies"
+             role="tab">Policies</a></li> -->
+    </ul>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active " id="information">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="row">
+                <div class="form-group col-xs-12 col-md-6">
+                  <label class="required" for="registerno">Guesthouse Reference Number</label>
+                  <input type="text" class="form-control form-control-sm" id="registerno"
+                    validation="number|required|min_len:5" ng-model="newGuestHouse.registerno">
+                </div>
+                <div class="form-group col-xs-12 col-md-6">
+                  <label class="required" for="gname">Guesthouse Name</label>
+                  <input type="text" class="form-control form-control-sm" id="gname"
+                    ng-model="newGuestHouse.guestHouse_Name">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-12 col-md-6">
+                  <div class="w-100">
+                    <label class="required" for="phone">Phone</label>
+                    <input class="form-control" id="phone" ng-model="newGuestHouse.phone"
+                      validation="number|maz_len:10">
+                  </div>
+                </div>
+                <div class="form-group col-xs-12 col-md-6">
+                  <label class="required" for="email">Email Address</label>
+                  <input class="form-control" id="email" ng-model="newGuestHouse.email"
+                    validation="email|required|min_len:6">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 form-group">
+              <label>Add Images of the Guesthouse</label>
+              <div class="column">
+                <div class="dropzone dropzone-formcontroll-lg" options="imageAttachment.dzOptions"
+                  callbacks="imageAttachment.dzCallbacks" methods="imageAttachment.dzMethods" ng-dropzone style></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label for="aboutdepartment">Brief Description</label>
+              <textarea ui-tinymce="tinymceOptions" ng-model="newGuestHouse.description" class="form-control"
+                validation="required"></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-xs-12 col-md-6">
+              <label class="required" for="addrline1text">Address</label>
+              <input type="text" class="form-control form-control-sm" id="addrline1text"
+                ng-model="newGuestHouse.addrline1text" placeholder="Address Line 1" validation="required">
+            </div>
+            <div class="form-group col-xs-12 col-md-6">
+              <label class="required" for="addrline2text" class="invisible">Address Line 2</label>
+              <input type="text" class="form-control form-control-sm" id="addrline2text"
+                ng-model="newGuestHouse.addrline2text" placeholder="Address Line 2" validation="required">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="row">
+                <div class="form-group col-xs-12 col-md-6">
+                  <label class="required" for="citytext">City</label>
+                  <input type="text" class="form-control form-control-sm" id="citytext" ng-model="newGuestHouse.city"
+                    validation="required">
+                </div>
+                <div class="form-group col-xs-12 col-md-6">
+                  <label>State</label>
+                  <select class="form-control form-control-sm custom-select" ng-model="newGuestHouse.state">
+                    <option disabled selected>Select</option>
+                    <option>Andaman and Nicobar Islands</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chandigarh</option>
+                    <option>Chhattisgarh</option>
+                    <option>Dadra and Nagar Haveli</option>
+                    <option>Daman and Diu</option>
+                    <option>Delhi</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jammu and Kashmir</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Lakshadweep</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Orissa</option>
+                    <option>Pondicherry</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Tripura</option>
+                    <option>Uttaranchal</option>
+                    <option>Uttar Pradesh</option>
+                    <option>West Bengal</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="row">
+                <div class="form-group col-xs-12 col-md-6">
+                  <label class="required" for="pin">PIN Code</label>
+                  <input type="text" class="form-control form-control-sm" id="pin" ng-model="newGuestHouse.pincode"
+                    validation="Number|required|max_len:6">
+                </div>
+                <div class="form-group col-xs-12 col-md-6">
+                  <label class="required" for="country">Country</label>
+                  <select class="form-control form-control-sm custom-select" id="country"
+                    ng-model="newGuestHouse.country" validation="required">
+                    <option value="AF">Afghanistan</option>
+                    <option value="AX">Åland Islands</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                    <option value="BY">Belarus</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BZ">Belize</option>
+                    <option value="BJ">Benin</option>
+                    <option value="BM">Bermuda</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BO">Bolivia, Plurinational State of</option>
+                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                    <option value="BA">Bosnia and Herzegovina</option>
+                    <option value="BW">Botswana</option>
+                    <option value="BV">Bouvet Island</option>
+                    <option value="BR">Brazil</option>
+                    <option value="IO">British Indian Ocean Territory</option>
+                    <option value="BN">Brunei Darussalam</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="BI">Burundi</option>
+                    <option value="KH">Cambodia</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="CA">Canada</option>
+                    <option value="CV">Cape Verde</option>
+                    <option value="KY">Cayman Islands</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="TD">Chad</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CX">Christmas Island</option>
+                    <option value="CC">Cocos (Keeling) Islands</option>
+                    <option value="CO">Colombia</option>
+                    <option value="KM">Comoros</option>
+                    <option value="CG">Congo</option>
+                    <option value="CD">Congo, the Democratic Republic of the</option>
+                    <option value="CK">Cook Islands</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="CI">Côte d'Ivoire</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CW">Curaçao</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="DM">Dominica</option>
+                    <option value="DO">Dominican Republic</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="EE">Estonia</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="FK">Falkland Islands (Malvinas)</option>
+                    <option value="FO">Faroe Islands</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="PF">French Polynesia</option>
+                    <option value="TF">French Southern Territories</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GI">Gibraltar</option>
+                    <option value="GR">Greece</option>
+                    <option value="GL">Greenland</option>
+                    <option value="GD">Grenada</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GG">Guernsey</option>
+                    <option value="GN">Guinea</option>
+                    <option value="GW">Guinea-Bissau</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HM">Heard Island and McDonald Islands</option>
+                    <option value="VA">Holy See (Vatican City State)</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IR">Iran, Islamic Republic of</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IM">Isle of Man</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JE">Jersey</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="KP">Korea, Democratic People's Republic of</option>
+                    <option value="KR">Korea, Republic of</option>
+                    <option value="KW">Kuwait</option>
+                    <option value="KG">Kyrgyzstan</option>
+                    <option value="LA">Lao People's Democratic Republic</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LB">Lebanon</option>
+                    <option value="LS">Lesotho</option>
+                    <option value="LR">Liberia</option>
+                    <option value="LY">Libya</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MO">Macao</option>
+                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MV">Maldives</option>
+                    <option value="ML">Mali</option>
+                    <option value="MT">Malta</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="MR">Mauritania</option>
+                    <option value="MU">Mauritius</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="FM">Micronesia, Federated States of</option>
+                    <option value="MD">Moldova, Republic of</option>
+                    <option value="MC">Monaco</option>
+                    <option value="MN">Mongolia</option>
+                    <option value="ME">Montenegro</option>
+                    <option value="MS">Montserrat</option>
+                    <option value="MA">Morocco</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="MM">Myanmar</option>
+                    <option value="NA">Namibia</option>
+                    <option value="NR">Nauru</option>
+                    <option value="NP">Nepal</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="NC">New Caledonia</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="NE">Niger</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NU">Niue</option>
+                    <option value="NF">Norfolk Island</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="NO">Norway</option>
+                    <option value="OM">Oman</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PW">Palau</option>
+                    <option value="PS">Palestinian Territory, Occupied</option>
+                    <option value="PA">Panama</option>
+                    <option value="PG">Papua New Guinea</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PN">Pitcairn</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="QA">Qatar</option>
+                    <option value="RE">Réunion</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russian Federation</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="BL">Saint Barthélemy</option>
+                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                    <option value="KN">Saint Kitts and Nevis</option>
+                    <option value="LC">Saint Lucia</option>
+                    <option value="MF">Saint Martin (French part)</option>
+                    <option value="PM">Saint Pierre and Miquelon</option>
+                    <option value="VC">Saint Vincent and the Grenadines</option>
+                    <option value="WS">Samoa</option>
+                    <option value="SM">San Marino</option>
+                    <option value="ST">Sao Tome and Principe</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SN">Senegal</option>
+                    <option value="RS">Serbia</option>
+                    <option value="SC">Seychelles</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SX">Sint Maarten (Dutch part)</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Solomon Islands</option>
+                    <option value="SO">Somalia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="GS">South Georgia and the South Sandwich Islands</option>
+                    <option value="SS">South Sudan</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SR">Suriname</option>
+                    <option value="SJ">Svalbard and Jan Mayen</option>
+                    <option value="SZ">Swaziland</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SY">Syrian Arab Republic</option>
+                    <option value="TW">Taiwan, Province of China</option>
+                    <option value="TJ">Tajikistan</option>
+                    <option value="TZ">Tanzania, United Republic of</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TL">Timor-Leste</option>
+                    <option value="TG">Togo</option>
+                    <option value="TK">Tokelau</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad and Tobago</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="TR">Turkey</option>
+                    <option value="TM">Turkmenistan</option>
+                    <option value="TC">Turks and Caicos Islands</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="UG">Uganda</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="UM">United States Minor Outlying Islands</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="VE">Venezuela, Bolivarian Republic of</option>
+                    <option value="VN">Viet Nam</option>
+                    <option value="VG">Virgin Islands, British</option>
+                    <option value="VI">Virgin Islands, U.S.</option>
+                    <option value="WF">Wallis and Futuna</option>
+                    <option value="EH">Western Sahara</option>
+                    <option value="YE">Yemen</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZW">Zimbabwe</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer text-right">
+          <button type="submit" class="btn btn-success" ng-if="detailsdataMode=='ADD'" ng-click="saveGuestHouse()"><i
+              class="la la-floppy-o mr-2"></i>Save</button>
+          <button type="submit" class="btn btn-success" ng-if="detailsdataMode=='Edit'"
+            ng-click="updateGuestHouseBasicInfo()"><i class="la la-floppy-o mr-2"></i>Update</button>
+
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="room">
+        <div class="table-container">
+          <div class="element-actions p-3 text-right"> <button type="button" class="btn btn-sm btn-primary"
+              data-toggle="modal" href="javascript:void(0);" ng-click="setEnvironmentForAdd(guestHouse._id)"><i
+                class="la la-plus-circle mr-2"></i>Add Room Type</button></div>
+          <div class="table-body">
+            <table id="dropouts-table" class="standard-table table-border datatable table">
+              <thead>
+                <tr>
+                  <th class="sort ascending">Name</th>
+                  <th>Facilities</th>
+                  <th>Max Number of Adults</th>
+                  <th>Max Number of Children</th>
+                  <th>Tariff</th>
+                  <th>Tariff Effective Date</th>
+                  <th class="text-center action3">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="rooms in roomType">
+                  <td data-title="Name">{{rooms.roomname}}</td>
+                  <td data-title="Facilities"><span ng-repeat="item in rooms.facilities"><span
+                        class="badge badge-pill badge-primary">{{item}}</span></span></td>
+                  <td data-title="Plateform">{{rooms.adult}}</td>
+                  <td data-title="Engine Version">{{rooms.Children}}</td>
+                  <td data-title="Engine Version">{{rooms.tariff}}</td>
+                  <td data-title="CSS Grade">{{rooms.datetime}}</td>
+                  <td data-title="Action" class="action">
+                    <div class="input-group">
+                      <div class="input-group-append"><a class="btn btn-table btn-sm rounded-0 py-0" data-toggle="modal"
+                          ng-click="editRoomType(rooms)"> <i class="la la-edit"></i> Edit </a> <a
+                          class="btn btn-table btn-sm rounded-0 py-0" ng-click="confirmModal(rooms._id)"> <i
+                            class="la la-trash"></i> Delete </a>
+                        <!-- <div class="dropdown-menu py-0" aria-labelledby="moduleversion">
+                            <ul class="list-group my-0">
+                              <li class="list-group-item"><a>Cras justo odio</a></li>
+                              <li class="list-group-item"><a>Dapibus ac facilisis</a></li>
+                              <li class="list-group-item"><a>Morbi leo risus</a></li>
+                            </ul>
+                          </div> -->
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="standard-table-footer">
+            <!-- <div class="row">
+                <div class="col-sm-4">
+                  <select class="per-page">
+                    <option>5</option>
+                  </select>
+                  <span>per page</span> </div>
+                <div class="col-sm-8 text-right">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-double-left mr-0"></span></button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-left mr-0"></span></button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm">1</button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm">2</button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm">3</button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm">4</button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm">5</button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-right mr-0"></span></button>
+                    <button type="button" class="btn btn-outline-mauve btn-sm"><span class="la la-angle-double-right mr-0"></span></button>
+                  </div>
+                </div>
+              </div> -->
+          </div>
+        </div>
+        <!--<div class="card-footer text-right">
+            <button type="reset" class="btn btn-secondary mr-2">Cancel</button>
+            <button type="submit" class="btn btn-success"><i class="la la-floppy-o mr-2"></i>Save</button>
+          </div>-->
+      </div>
+      <!--<div class="tab-pane fade" id="policies">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4"> policies </div>
+            </div>
+          </div>
+        </div>-->
+        <div class="tab-pane fade" id="floors">
+          <div class="card-body">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5><a class=""  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Floor 1 </a> </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-2 form-group">
+                        <label class="required">Room Prefix {{newfloor.roomNumber[sectionIndex].room[$index]}}</label>
+                        <input type="text" ng-model="newfloor.floor[0].roomPrefix" ng-change="prefixVal();" class="form-control form-control-sm" />
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <label class="required">Number of Rooms</label>
+                        <input type="number" ng-model="newfloor.numberRoom[0]" ng-change="roomCount(0, newfloor.numberRoom[0]);" class="form-control form-control-sm" />
+                      </div>
+                     
+                      <div class="col-md-2 form-group">
+                        <label class="required">Number of Digits</label>
+                        <input type="number" ng-model="newfloor.numberDigit[0]"  ng-change="roomNoDigit(0, newfloor.numberDigit[0]);"  class="form-control form-control-sm" />
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <label class="required">Room Starting Number</label>
+                        <input type="number" ng-model="newfloor.startingNumber[0]"  ng-change="roomNoDigit(0, newfloor.startingNumber[0]);"  class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="room-list" ng-repeat="rooms in roomCounts[0] track by $index"> <span class="room-details bg-success"> <strong>{{newfloor.floor[0].roomPrefix}}</strong> {{newfloor.roomNumber[0].room[$index]}} </span> <a class="edit-room" data-target="#editRoomModal" data-toggle="modal"><i class="la la-edit"></i></a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" ng-repeat="floor in floors track by $index" ng-init="sectionIndex = $index + 1">
+                <div class="card-header" id="heading{{sectionIndex}}">
+                  <h5><a class=""  data-toggle="collapse" data-target="#collapse{{sectionIndex}}"  aria-controls="collapse{{sectionIndex}}">Floor {{sectionIndex + 1}} </a> </h5>
+                </div>
+                <div id="collapse{{sectionIndex}}" class="collapse" aria-labelledby="heading{{sectionIndex}}" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-2 form-group">
+                        <label class="required">Room Prefix</label>
+                        <input type="text" ng-model="newfloor.floor[sectionIndex].roomPrefix" ng-change="prefixVal();" class="form-control form-control-sm" />
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <label class="required">Number of Rooms</label>
+                        <input type="number" ng-model="newfloor.numberRoom[sectionIndex]" ng-change="roomCount(sectionIndex, newfloor.numberRoom[sectionIndex]);" class="form-control form-control-sm" />
+                      </div>
+                      
+                      <div class="col-md-2 form-group">
+                        <label class="required">Number of Digits</label>
+                        <input type="number" min="1" ng-model="newfloor.numberDigit[sectionIndex]" ng-change="roomNoDigit(sectionIndex,newfloor.numberDigit[sectionIndex]);"  class="form-control form-control-sm" />
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <label class="required">Room Starting Number</label>
+                        <input type="number" min="1" ng-model="newfloor.startingNumber[sectionIndex]" ng-change="roomNoDigit(sectionIndex, newfloor.startingNumber[sectionIndex]);"  class="form-control form-control-sm" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="room-list" ng-repeat="room in roomCounts[sectionIndex] track by $index"> <span class="room-details bg-success"> <strong>{{newfloor.floor[sectionIndex].roomPrefix}}</strong> {{newfloor.roomNumber[sectionIndex].room[$index]}} </span> <a class="edit-room" data-target="#editRoomModal" data-toggle="modal"><i class="la la-edit"></i></a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+    </div>
+  </div>
+</section>
+<div id="editRoomModal" class="modal fade" data-keyboard="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title">Room</h6>
+        <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">×</span> <span
+            class="sr-only">close</span> </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <form>
+              <div class="row">
+                <div class="col-md-6 form-group" ng-repeat="room in roomCounts[0] track by $index">
+                  <label>Room Number</label>
+                  <input type="text" value="{{new.floor[0].room[$index]}}" class="form-control form-control-sm" />
+                </div>
+                <div class="col-md-6 form-group">
+                  <label>Room Type</label>
+                  <select class="form-control form-control-sm custom-select">
+                    <option ng-repeat="rooms in roomType">{{rooms.roomname}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label>Status</label>
+                  <select class="form-control form-control-sm custom-select">
+                    <option>Active</option>
+                    <option>Blocked</option>
+                    <option>Maintenance</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="addRoomType" class="modal fade" data-keyboard="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" ng-if="dataMode == 'ADD'">Add Room Type</h6>
+        <h6 class="modal-title" ng-if="dataMode == 'EDIT'">Edit Room Type</h6>
+        <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">×</span> <span
+            class="sr-only">close</span> </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <label class="required" for="roomType">Room Type Name</label>
+            <input type="text" ng-model="newGuestHouse.roomname" class="form-control form-control-sm" id="roomType" />
+          </div>
+          <div class="col-md-8 form-group">
+            <label for="facilities" class="required">Facilities</label>
+            <ui-select multiple ng-model="newGuestHouse.facilities" close-on-select="false">
+              <ui-select-match placeholder="Select">{{$item}}</ui-select-match>
+              <ui-select-choices repeat="list in (facility | filter: $select.search)">
+                <div ng-bind-html="list | highlight: $select.search"></div>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <label for="Occupancy" class="required">Occupancy</label>
+            <div class="input-group">
+              <input type="text" ng-model="newGuestHouse.adult" class="form-control form-control-sm"
+                placeholder="Adults" id="Occupancy" />
+              <input type="text" ng-model="newGuestHouse.Children" class="form-control form-control-sm"
+                placeholder="Children" id="Occupancy" />
+            </div>
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="tariff" class="required">Tariff</label>
+            <div class="input-group input-group-sm">
+              <div class="input-group-prepend text-center"> <span
+                  class="input-group-text font-weight-bold justify-content-center">&#8377</span> </div>
+              <input type="text" ng-model="newGuestHouse.tariff" class="form-control form-control-sm" id="tariff" />
+            </div>
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="date" class="required">Tariff Effective Date</label>
+            <div class="column">
+              <input class="form-control form-control-sm" placeholder="DD/MM/YYYY" id="date" ng-flatpickr
+                fp-opts="dateOpts1" ng-model="newGuestHouse.datetime">
+              <span class="calender-caret"></span> </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <label for="shortDescription">Short Description</label>
+            <textarea rows="4" ng-model="newGuestHouse.description" id="shortDescription"
+              class="form-control form-control-sm"></textarea>
+          </div>
+          <div class="col-md-8 form-group">
+            <label>Add Images</label>
+            <div class="column">
+              <div class="dropzone dropzone-formcontroll-lg" options="roomTypeImage.dzOptions"
+                callbacks="roomTypeImage.dzCallbacks" methods="roomTypeImage.dzMethods" ng-dropzone
+                style="min-height:7.5rem"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" ng-click="saveRoomType(guestHouse._id)" ng-if="dataMode == 'ADD'" class="btn btn-primary">Save</button>
+        <button type="button" ng-click="updateRoomType(rooms)" ng-if="dataMode == 'EDIT'"
+          class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="confirmModal" class="modal fade">
+  <div class="modal-dialog modal-sm modal-confirm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-center">
+          Are you sure want to delete?</h4>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal"
+          ng-click="deleteRoomTypeSure(rooms._id);">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

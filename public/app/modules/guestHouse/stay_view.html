@@ -1,0 +1,348 @@
+
+<ol class="breadcrumb border-bottom">
+  <li class="module_name flex-grow-1 mr-2">LAUDEA: Module Name <a href="adaa" id="moduleversion" class="version dropdown-toggle px-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v2.0.2 </a>
+    <div class="dropdown-menu" aria-labelledby="moduleversion">
+      <h6 class="dropdown-header">v2.0.2 Release Notes</h6>
+      <div class="dropdown-divider"></div>
+      <ul class="list-group my-0">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB HOME</a> </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB PARENT</a> </li>
+  <li class="breadcrumb-item active">BREADCRUMB CHILD</li>
+</ol><section class="content">
+    
+  <div class="element-wrapper">
+    <h1 class="element-title">Dashboard</h1>
+  </div>
+
+  <div class="card">
+    <div class="card-body p-0">
+       <div class="row py-1">
+         <div class="col-md-4 d-flex align-items-center">
+          <div class="input-group px-2 py-2 py-md-0 pr-md-0 pl-md-3">
+            <select class="form-control form-control-sm custom-select">
+              <option data-ui-sref="stayView" data-ui-sref-active="active" data-toggle="collapse">Stay View</option>
+              <option data-ui-sref="roomView" data-ui-sref-active="active" data-toggle="collapse">Room View</option>
+            </select>
+            <div class="column">
+              <input class="form-control form-control-sm" placeholder="mm/dd/yyyy" ng-flatpickr fp-opts="dateOpts1" ng-model="date1">
+                  <span class="calender-caret"></span>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-8 pt-2 pt-md-0">
+          <ul class="gh-notify text-md-right">
+            <li>
+              <a> Vacant <span class="vacent"> <i class="la la-square-o"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Occupied <span class="occupied"> <i class="la la-square"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Reserved <span class="reserved"> <i class="la la-check-square"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Maintenance <span class="outorder"> <i class="la la-key"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Due Out <span class="dueout"> <i class="la la-exclamation-triangle"></i> <b>42</b> </span> </a>
+            </li>
+              
+            <li>
+              <a> All <span  class="all"> <i class="la la-building"></i> <b>42</b> </span> </a>
+            </li>
+          </ul>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-12">
+           <div class="gh-calender-header d-flex align-items-center justify-content-between">
+            
+            <h5><a><i class="la la-angle-left"></i></a> January <a><i class="la la-angle-right"></i></a> </h5>
+            <div class="day-view">
+              <a><i class="la la-angle-left"></i></a>
+              <span>Today</span>
+              <a><i class="la la-angle-right"></i></a>
+            </div>
+            <!-- <div class="multi-day-view">
+              <a>7 Days</a><a class="active">15 Days</a><a>30 Days</a>
+            </div> -->
+
+           </div>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-12">
+            <div class="gantt-table-wrapper gh-gantt-table-wrapper">
+                <div class="gantt-sidebar">
+                  <table class="gantt-table not-responsive">
+                    <thead class="thead-date">
+                      <tr>
+                        <th class="text-center">+/-</th>
+                        <th class="text-center th-rooms">Room(s)</th>
+                      </tr>
+                    </thead>
+                    <thead class="secondary-thead">
+                      <tr>
+                        <th class="text-center">-</th>
+                        <th class="text-center">Delux</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr-parent">
+                          <td class="text-center"><div class="room-notify-icon bg-vacent"></div></td>
+                          <td class="text-center"> 101 </td>
+                      </tr>
+                      <tr class="tr-parent">
+                          <td class="text-center"><div class="room-notify-icon bg-occupied"></div></td>
+                          <td class="text-center"> 102 </td>
+                      </tr>
+                      <tr class="tr-parent">
+                          <td class="text-center"><div class="room-notify-icon bg-reserved"></div></td>
+                          <td class="text-center"> 103 </td>
+                      </tr>
+                      <tr class="tr-parent">
+                          <td class="text-center"><div class="room-notify-icon bg-outorder"></div></td>
+                          <td class="text-center"> 104 </td>
+                      </tr>
+                      <tr class="tr-parent">
+                         <td class="text-center"><div class="room-notify-icon bg-dueout"></div></td>
+                          <td class="text-center"> 105 </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <div class="gantt-container">
+                  <table class="gantt-table not-responsive">
+                    <thead class="thead-date">
+                      <tr>
+                        <th class="text-center current-date">01</th>
+                        <th class="text-center">02</th>
+                        <th class="text-center">03</th>
+                        <th class="text-center">04</th>
+                        <th class="text-center holiday-date">05</th>
+                        <th class="text-center holiday-date">06</th>
+                        <th class="text-center">07</th>
+                        <th class="text-center">08</th>
+                        <th class="text-center">09</th>
+                        <th class="text-center">10</th>
+                        <th class="text-center">11</th>
+                        <th class="text-center holiday-date">12</th>
+                        <th class="text-center holiday-date">13</th>
+                        <th class="text-center">14</th>
+                        <th class="text-center">15</th>
+                        <th class="text-center">16</th>
+                        <th class="text-center">17</th>
+                        <th class="text-center">18</th>
+                        <th class="text-center holiday-date">19</th>
+                        <th class="text-center holiday-date">20</th>
+                        <th class="text-center">21</th>
+                        <th class="text-center">22</th>
+                        <th class="text-center">23</th>
+                        <th class="text-center">24</th>
+                        <th class="text-center">25</th>
+                        <th class="text-center holiday-date">26</th>
+                        <th class="text-center holiday-date">27</th>
+                        <th class="text-center">28</th>
+                        <th class="text-center">29</th>
+                        <th class="text-center">30</th>
+                        <th class="text-center">31</th>
+
+                      </tr>
+                      <tr>
+                          <th class="text-center current-date">Tue</th>
+                          <th class="text-center">Wed</th>
+                          <th class="text-center">Thu</th>
+                          <th class="text-center">Fri</th>
+                          <th class="text-center holiday-date">Sat</th>
+                          <th class="text-center holiday-date">Sun</th>
+                          <th class="text-center">Mon</th>
+                          <th class="text-center">Tue</th>
+                          <th class="text-center">Wed</th>
+                          <th class="text-center">Thu</th>
+                          <th class="text-center">Fri</th>
+                          <th class="text-center holiday-date">Sat</th>
+                          <th class="text-center holiday-date">Sun</th>
+                          <th class="text-center">Mon</th>
+                          <th class="text-center">Tue</th>
+                          <th class="text-center">Wed</th>
+                          <th class="text-center">Thu</th>
+                          <th class="text-center">Fri</th>
+                          <th class="text-center holiday-date">Sat</th>
+                          <th class="text-center holiday-date">Sun</th>
+                          <th class="text-center">Mon</th>
+                          <th class="text-center">Tue</th>
+                          <th class="text-center">Wed</th>
+                          <th class="text-center">Thu</th>
+                          <th class="text-center">Fri</th>
+                          <th class="text-center holiday-date">Sat</th>
+                          <th class="text-center holiday-date">Sun</th>
+                          <th class="text-center">Mon</th>
+                          <th class="text-center">Tue</th>
+                          <th class="text-center">Wed</th>
+                          <th class="text-center">Thu</th>
+                          
+                        </tr>
+                    </thead>
+                    <thead class="secondary-thead">
+                      <tr>
+                        <th class="text-center">0</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">5</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">3</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">5</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">3</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">5</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">3</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">5</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">3</th>
+                        <th class="text-center">0</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">1</th>
+                        <th class="text-center">4</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="45"> 
+                         
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 80px; left:0;">
+                            <div class="progress-bar bg-vacent" role="progressbar" aria-valuemin="0" aria-valuemax="100">Vacant</div>
+                          </div>
+
+                          <div class="dropdown gh-dropdown">
+                            <div data-toggle="dropdown" class="progress task-progress-bar fc-bg-default" style="width: 320px; left:80px;">
+                              <div class="progress-bar bg-reserved" role="progressbar" aria-valuemin="0" aria-valuemax="100">Binny Hannaby</div>
+                            </div>
+                            <div class="dropdown-menu row">
+                              <div class="col-12"><h6><i class="la la-hotel"></i>  101</h6></div>
+                              <div class="col-12"><span> <i class="la la-user"></i> Guest :</span> Binny Hannaby</div>
+                              <div class="col-12"><span> <i class="la la-calendar-o"></i> Check in :</span> 03-01-2019</div>
+                              <div class="col-12"><span> <i class="la la-calendar-o"></i> Check Out :</span> 10-01-2019</div>
+                            </div>
+                          </div>
+
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 80px; left:400px;">
+                            <div class="progress-bar bg-outorder" role="progressbar" aria-valuemin="0" aria-valuemax="100">Maintenance</div>
+                          </div>
+                          
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 320px; left:480px;">
+                            <div class="progress-bar bg-occupied" role="progressbar" aria-valuemin="0" aria-valuemax="100">Binny Hannaby</div>
+                          </div>
+
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 360px; left:800px;">
+                            <div class="progress-bar bg-vacent" role="progressbar" aria-valuemin="0" aria-valuemax="100">Vacant</div>
+                          </div>
+
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 80px; left:1160px;">
+                            <div class="progress-bar bg-reserved" role="progressbar" aria-valuemin="0" aria-valuemax="100">Sutton</div>
+                          </div>
+
+                         
+                        </td>
+                      </tr>
+
+                      <tr class="collapse collapse1 show">
+                        <td colspan="45">  
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 400px; left:0;">
+                            <div class="progress-bar bg-occupied" role="progressbar" aria-valuemin="0" aria-valuemax="100">Binny Hannaby</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 360px; left:400px;">
+                            <div class="progress-bar bg-reserved" role="progressbar" aria-valuemin="0" aria-valuemax="100">Sutton</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 400px; left:760px;">
+                            <div class="progress-bar bg-occupied" role="progressbar" aria-valuemin="0" aria-valuemax="100">Harry</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 80px; left:1160px;">
+                            <div class="progress-bar bg-outorder" role="progressbar" aria-valuemin="0" aria-valuemax="100">Maintenance</div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="collapse collapse1 show">
+                        <td colspan="45"> 
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 120px; left:0;">
+                            <div class="progress-bar bg-reserved" role="progressbar" aria-valuemin="0" aria-valuemax="100">Sutton</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 320px; left:120px;">
+                            <div class="progress-bar bg-occupied" role="progressbar" aria-valuemin="0" aria-valuemax="100">Harry</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 280px; left:440px;">
+                            <div class="progress-bar bg-vacent" role="progressbar" aria-valuemin="0" aria-valuemax="100">Vacant</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 80px; left:720px;">
+                            <div class="progress-bar bg-outorder" role="progressbar" aria-valuemin="0" aria-valuemax="100">Maintenance</div>
+                          </div>
+                          <div class="progress task-progress-bar fc-bg-default" style="width:400px; left:800px;">
+                            <div class="progress-bar bg-reserved" role="progressbar" aria-valuemin="0" aria-valuemax="100">Sutton</div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="45"> 
+                           <div class="progress task-progress-bar fc-bg-default" style="width: 280px; left:0;">
+                            <div class="progress-bar bg-outorder" role="progressbar" aria-valuemin="0" aria-valuemax="100">Jim Andri</div>
+                          </div>
+                        </td>
+                      </tr>
+
+                       <tr>
+                        <td colspan="45"> 
+                          <div class="progress task-progress-bar fc-bg-default" style="width: 160px; left:0;">
+                            <div class="progress-bar bg-reserved" role="progressbar" aria-valuemin="0" aria-valuemax="100">Harry</div>
+                          </div>
+
+                          <div class="dropdown gh-dropdown">
+                            <div data-toggle="dropdown" class="progress task-progress-bar fc-bg-default" style="width: 320px; left:160px;">
+                              <div class="progress-bar bg-occupied" role="progressbar" aria-valuemin="0" aria-valuemax="100">Binny Hannaby</div>
+                            </div>
+                            <div class="dropdown-menu row">
+                              <div class="col-12"><h6><i class="la la-hotel"></i>  105</h6></div>
+                              <div class="col-12"><span> <i class="la la-user"></i> Guest :</span> Binny Hannaby</div>
+                              <div class="col-12"><span> <i class="la la-calendar-o"></i> Check in :</span> 01-01-2019</div>
+                              <div class="col-12"><span> <i class="la la-calendar-o"></i> Check Out :</span> 04-01-2019</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+         </div>
+       </div>
+
+
+    </div>
+  </div>
+ 
+</section>

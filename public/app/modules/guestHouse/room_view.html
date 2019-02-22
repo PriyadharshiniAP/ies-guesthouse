@@ -1,0 +1,202 @@
+
+<ol class="breadcrumb border-bottom">
+  <li class="module_name flex-grow-1 mr-2">LAUDEA: Module Name <a href="adaa" id="moduleversion" class="version dropdown-toggle px-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v2.0.2 </a>
+    <div class="dropdown-menu" aria-labelledby="moduleversion">
+      <h6 class="dropdown-header">v2.0.2 Release Notes</h6>
+      <div class="dropdown-divider"></div>
+      <ul class="list-group my-0">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB HOME</a> </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB PARENT</a> </li>
+  <li class="breadcrumb-item active">BREADCRUMB CHILD</li>
+</ol><section class="content">
+    
+  <div class="element-wrapper">
+    <h1 class="element-title">Dashboard</h1>
+  </div>
+
+  <div class="card mb-5">
+    <div class="card-body p-0">
+       <div class="row py-1">
+         <div class="col-md-4 d-flex align-items-center">
+          <div class="input-group px-2 py-2 py-md-0 pr-md-0 pl-md-3">
+            <select class="form-control form-control-sm custom-select">
+              <option>Room View</option>
+              <option>Stay View</option>
+            </select>
+            <div class="column">
+              <input class="form-control form-control-sm" placeholder="mm/dd/yyyy" ng-flatpickr fp-opts="dateOpts1" ng-model="date1">
+                  <span class="calender-caret"></span>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-8 pt-2 pt-md-0">
+          <ul class="gh-notify text-md-right">
+            <li>
+              <a> Vacant <span class="vacent"> <i class="icon icon-030"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Occupied <span class="occupied"> <i class="icon icon-023"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Reserved <span class="reserved"> <i class="icon icon-125"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Maintenance <span class="outorder"> <i class="icon icon-239"></i> <b>42</b> </span> </a>
+            </li>
+            <li>
+              <a> Due Out <span class="dueout"> <i class="icon icon-225"></i> <b>42</b> </span> </a>
+            </li>
+            
+            <li>
+              <a> All <span  class="all"> <i class="icon icon-144"></i> <b>42</b> </span> </a>
+            </li>
+          </ul>
+         </div>
+       </div>
+      
+      </div>
+      
+
+      <div class="accordion card-roomview" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5><a class=""  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Floor 1 </a> </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="room-list"> 
+                      <span class="room-details bg-success"> PSG-101 </span> 
+                      <div class="room-status">
+                        <div class="vacent"><i class="icon icon-030"></i></div>
+                        <div class="room-status-footer bg-vacent ">Vacant</div>
+                      </div>
+                    </div>
+                    <div class="room-list"> 
+                      <span class="room-details bg-success"> PSG-102 </span> 
+                      <div class="room-status">
+                        <div class="occupied"><i class="icon icon-023"></i></div>
+                        <div class="room-status-footer bg-occupied ">Occupied</div>
+                      </div>
+                    </div>
+                    <div class="room-list"> 
+                      <span class="room-details bg-success"> PSG-103 </span> 
+                      <div class="room-status">
+                        <div class="reserved"><i class="icon icon-125"></i></div>
+                        <div class="room-status-footer bg-reserved">Reserved</div>
+                      </div>
+                    </div>
+                    <div class="room-list"> 
+                      <span class="room-details bg-success"> PSG-104 </span> 
+                      <div class="room-status">
+                        <div class="outorder"><i class="icon icon-239"></i></div>
+                        <div class="room-status-footer bg-outorder">Maintenance</div>
+                      </div>
+                    </div>
+                    <div class="room-list"> 
+                      <span class="room-details bg-success"> PSG-105 </span> 
+                      <div class="room-status">
+                        <div class="occupied"><i class="icon icon-023"></i></div>
+                        <div class="room-status-footer bg-occupied">Occupied</div>
+                      </div>
+                    </div>
+                    <div class="room-list"> 
+                      <span class="room-details bg-success"> PSG-106 </span>
+                      <div class="room-status">
+                        <div class="reserved"><i class="icon icon-125"></i></div>
+                        <div class="room-status-footer bg-reserved">Reserved</div>
+                      </div>
+                      
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5><a class=""  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Floor 2 </a> </h5>
+              </div>
+              <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="room-list"> 
+                            <span class="room-details bg-success"> PSG-201 </span> 
+                            <div class="room-status">
+                              <div class="vacent"><i class="icon icon-030"></i></div>
+                              <div class="room-status-footer bg-vacent ">Vacant</div>
+                            </div>
+                          </div>
+                          <div class="room-list"> 
+                            <span class="room-details bg-success"> PSG-202 </span> 
+                            <div class="room-status">
+                              <div class="occupied"><i class="icon icon-023"></i></div>
+                              <div class="room-status-footer bg-occupied ">Occupied</div>
+                            </div>
+                          </div>
+                          <div class="room-list"> 
+                            <span class="room-details bg-success"> PSG-203 </span> 
+                            <div class="room-status">
+                              <div class="reserved"><i class="icon icon-125"></i></div>
+                              <div class="room-status-footer bg-reserved">Reserved</div>
+                            </div>
+                          </div>
+                          <div class="room-list"> 
+                            <span class="room-details bg-success"> PSG-204 </span> 
+                            <div class="room-status">
+                              <div class="outorder"><i class="icon icon-239"></i></div>
+                              <div class="room-status-footer bg-outorder">Maintenance</div>
+                            </div>
+                          </div>
+                          <div class="room-list"> 
+                            <span class="room-details bg-success"> PSG-205 </span> 
+                            <div class="room-status">
+                              <div class="occupied"><i class="icon icon-023"></i></div>
+                              <div class="room-status-footer bg-occupied">Occupied</div>
+                            </div>
+                          </div>
+                          <div class="room-list"> 
+                            <span class="room-details bg-success"> PSG-206 </span>
+                            <div class="room-status">
+                              <div class="reserved"><i class="icon icon-125"></i></div>
+                              <div class="room-status-footer bg-reserved">Reserved</div>
+                            </div>
+                            
+                          </div>
+      
+      
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          
+    
+          
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+  </div>
+ 
+</section>

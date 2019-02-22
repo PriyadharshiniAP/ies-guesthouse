@@ -1,0 +1,497 @@
+<ol class="breadcrumb border-bottom">
+  <li class="module_name flex-grow-1 mr-2">LAUDEA: Module Name <a href="adaa" id="moduleversion" class="version dropdown-toggle px-2"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v2.0.2 </a>
+    <div class="dropdown-menu" aria-labelledby="moduleversion">
+      <h6 class="dropdown-header">v2.0.2 Release Notes</h6>
+      <div class="dropdown-divider"></div>
+      <ul class="list-group my-0">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB HOME</a> </li>
+  <li class="breadcrumb-item"> <a href="#">BREADCRUMB PARENT</a> </li>
+  <li class="breadcrumb-item active">BREADCRUMB CHILD</li>
+</ol>
+<section class="content">
+  <div class="element-wrapper">
+    <h1 class="element-title">Room List</h1>
+    <div class="element-actions">
+
+    </div>
+  </div>
+  <div class="card">
+    <!--  <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-0 pb-0">
+        <div class="standard-table-header">
+          <div class="standard-table-filter border-bottom-0">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="filter-action input-group input-group-sm"> <span class="align-self-center ml-1 mr-2">Active Filters</span> <span class="tag-container">Categories: <span class="tag">All <a href="javascript:void(0)"><i class="fas fa-times"></i></a></span></span> </div>
+              </div>
+              <div class="col-md-3 mt-2 mt-md-0 text-right">
+                <div class="input-group input-group-sm">
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-gray-grad" type="button"> <i class="la la-search mr-0"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+    <div class="row">
+      <div class="col-12">
+        <div class="bg-white">
+          <div class="row ">
+            <div class="col-md-9">
+              <div class="room-thumb-list-2 hover_zoom bg-gray mb-3 mr-3" ng-repeat="item in roomType">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-5 col-md-12">
+                    <div class="overlay-5"><img src="{{item.roomTypeAttachmentDetails.imageUrl}}" alt="Booking Room"></div>
+                  </div>
+                  <div class="col-xl-6 col-lg-5 col-md-12" >
+                    <div class="py-3 h-100">
+                      <div class="room-info w-100" data-js-slimscroll="{height:'275px'}">
+                        <div class="down-line-left mb-3">
+                          <h5 class="title"><a class="text-primary-2" href="#">{{item.roomname}}</a></h5>
+                        </div>
+                        <p>{{item.description}}</p>
+                       
+                        <ul class="facility-icon">
+                          <li ng-repeat="facility in item.facilities"><i ng-class="getClasses('{{facility}}')"></i>{{facility}}</li>
+                          <!-- <li><i class="icon icon-047"></i> Wifi</li>
+                          <li><i class="icon icon-041"></i> GYM</li>
+                          <li><i class="icon icon-037"></i> VIP</li>
+                          <li><i class="icon icon-227"></i> AC</li>
+                          <li><i class="icon icon-202"></i> Parking Facility</li>
+                          <li><i class="icon icon-098"></i> Car Parking</li>
+                          <li><i class="icon icon-097"></i> Bike Parking</li>
+                          <li><i class="icon icon-045"></i> Food</li>
+                          <li><i class="icon icon-180"></i> Landline</li>
+                          <li><i class="icon icon-026"></i> Swimming Pool</li>
+                          <li><i class="icon icon-005"></i> Tea / Coffee</li>
+                          <li><i class="icon icon-209"></i> Games</li>
+                          <li><i class="icon icon-199"></i> Room Cleaning</li>
+                          <li><i class="icon icon-153"></i> CCTV Cameras</li>
+                          <li><i class="icon icon-060"></i> No smoking</li>
+                          <li><i class="icon icon-249"></i> Support</li>
+                          <li><i class="icon icon-111"></i> Card Payment</li>
+                          <li><i class="icon icon-216"></i> In-house Restauarant </li>
+                          <li><i class="icon icon-028"></i> Power Backup </li>
+                          <li><i class="icon icon-206"></i> Conference Room </li>
+                          <li><i class="icon icon-147"></i> Banquet Hall</li>
+                          <li><i class="icon icon-191"></i> Dining Area</li>
+                          <li><i class="icon icon-059"></i> Elevator</li>
+                          <li><i class="icon icon-158"></i> Hot Water</li>
+                          <li><i class="icon icon-188"></i> Bar</li>
+                          <li><i class="icon icon-178"></i> Wheelchair Accessible</li>
+                          <li><i class="icon icon-141"></i> Room Heater</li>
+                          <li><i class="icon icon-119"></i> In Room Safe</li>
+                          <li><i class="icon icon-223"></i> Mini Fridge</li>
+                          <li><i class="icon icon-173"></i> Complimentary Breakfast</li>
+                          <li><i class="icon icon-205"></i> Hair Dryer</li>
+                          <li><i class="icon icon-126"></i> Laundry </li>
+                          <li><i class="icon icon-156"></i> Pet Friendly</li>
+                          <li><i class="icon icon-013"></i> HDTV</li>
+                          <li><i class="icon icon-083"></i> Spa</li>
+                          <li><i class="icon icon-200"></i> Wellness Center</li>
+                          <li><i class="icon icon-231"></i> Electricity</li>
+                          <li><i class="icon icon-008"></i> Bath Tub</li>
+                          <li><i class="icon icon-079"></i> Netflix </li>
+                          <li><i class="icon icon-163"></i> Kindle</li>
+                          <li><i class="icon icon-090"></i> Coffee Tea Maker</li>
+                          <li><i class="icon icon-178"></i> Sofa Set</li>
+                          <li><i class="icon icon-008"></i> Jacuzzi</li>
+                          <li><i class="icon icon-187"></i> Full Length Mirrror</li>
+                          <li><i class="icon icon-233"></i> Balcony</li>
+                          <li><i class="icon icon-167"></i> King Bed</li>
+                          <li><i class="icon icon-022"></i> Single Bed</li>
+                          <li><i class="icon icon-076"></i> Intercom</li>
+                          <li><i class="icon icon-030"></i> Sufficient Room Size</li>
+                          <li><i class="icon icon-014"></i> Sufficient Washroom</li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2">
+                    <div class="for-booking">
+                      <div class="h5 per-night text-primary">{{item.tariff}}<small> / Night</small></div>
+                      <a class="btn btn-sm btn-primary" data-target="#roomBookingModal" data-toggle="modal">Request
+                        Room</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="room-thumb-list-2 hover_zoom bg-gray mb-3 mr-3">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="overlay-5 h-100"><img src="assets/img/room/2.png" alt="Booking Room"></div>
+                  </div>
+                  <div class="col-xl-6 col-lg-5 col-md-6">
+                    <div class="py-3 h-100">
+                      <div class="room-info w-100" data-js-slimscroll="{height:'275px'}">
+                        <div class="down-line-left mb-3">
+                          <h5 class="title"><a class="text-primary-2" href="#">Duplex Room</a></h5>
+                        </div>
+                        <p>Sami duble bed 2 window, mountain miew</p>
+                        <h6 class="mb-3">12 X 15 Sqft</h6>
+                        <ul class="facility-icon">
+                          <li><i class="icon icon-013"></i> TV</li>
+                          <li><i class="icon icon-202"></i> Parking Facility</li>
+                          <li><i class="icon icon-047"></i> Wifi</li>
+                          <li><i class="icon icon-041"></i> GYM</li>
+                          <li><i class="icon icon-037"></i> VIP</li>
+                          <li><i class="icon icon-227"></i> AC</li>
+                          <li><i class="icon icon-209"></i> Games</li>
+                          <li><i class="icon icon-153"></i> CCTV Cameras</li>
+                          <li><i class="icon icon-005"></i> Tea / Coffee</li>
+                          <li><i class="icon icon-199"></i> Room Cleaning</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2">
+                    <div class="for-booking">
+                      <div class="h5 per-night text-primary">80<small> / Night</small></div>
+                      <a class="btn btn-sm btn-primary">Request Room</a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="room-thumb-list-2 hover_zoom bg-gray mb-3 mr-3">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="overlay-5 h-100"><img src="assets/img/room/4.png" alt="Booking Room"></div>
+                  </div>
+                  <div class="col-xl-6 col-lg-5 col-md-6">
+                    <div class="py-3 h-100">
+                      <div class="room-info">
+                        <div class="down-line-left mb-3">
+                          <h5 class="title"><a class="text-primary-2" href="#">Economy Room</a></h5>
+                          <span class="subtext">Sami duble bed 2 window, mountain miew</span>
+                        </div>
+                        <p>Cubilia luctus cursus augue augue vivamus parturient porta ultr cursus fermen laoreet.
+                          Venenatis nostra consectetuer.</p>
+                        <ul class="facility-icon">
+                          <li><i class="flaticon-tv"></i></li>
+                          <li><i class="flaticon-wifi"></i></li>
+                        </ul>
+                        <div class="room-size">12 X 15 Sqft</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2">
+                    <div class="for-booking">
+                      <div class="h5 per-night text-primary">130<small> / Night</small></div>
+                      <a class="btn btn-sm btn-primary">Request Room</a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="room-thumb-list-2 hover_zoom bg-gray mb-3 mr-3">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="overlay-5 h-100"><img src="assets/img/room/5.png" alt="Booking Room"></div>
+                  </div>
+                  <div class="col-xl-6 col-lg-5 col-md-6">
+                    <div class="py-3 h-100">
+                      <div class="room-info">
+                        <div class="down-line-left mb-3">
+                          <h5 class="title"><a class="text-primary-2" href="#">Delux Room</a></h5>
+                          <span class="subtext">Sami duble bed 2 window, mountain miew</span>
+                        </div>
+                        <p>Cubilia luctus cursus augue augue vivamus parturient porta ultr cursus fermen laoreet.
+                          Venenatis nostra consectetuer.</p>
+                        <ul class="facility-icon">
+                          <li><i class="flaticon-tv"></i></li>
+                          <li><i class="flaticon-wifi"></i></li>
+                        </ul>
+                        <div class="room-size">12 X 15 Sqft</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2">
+                    <div class="for-booking">
+                      <div class="h5 per-night text-primary">127<small> / Night</small></div>
+                      <a class="btn btn-sm btn-primary">Request Room</a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="room-thumb-list-2 hover_zoom bg-gray mb-3 mr-3">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="overlay-5 h-100"><img src="assets/img/room/6.png" alt="Booking Room"></div>
+                  </div>
+                  <div class="col-xl-6 col-lg-5 col-md-6">
+                    <div class="py-3 h-100">
+                      <div class="room-info">
+                        <div class="down-line-left mb-3">
+                          <h5 class="title"><a class="text-primary-2" href="#">Special Room</a></h5>
+                          <span class="subtext">Sami duble bed 2 window, mountain miew</span>
+                        </div>
+                        <p>Cubilia luctus cursus augue augue vivamus parturient porta ultr cursus fermen laoreet.
+                          Venenatis nostra consectetuer.</p>
+                        <ul class="facility-icon">
+                          <li><i class="flaticon-tv"></i></li>
+                          <li><i class="flaticon-wifi"></i></li>
+                        </ul>
+                        <div class="room-size">12 X 15 Sqft</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2">
+                    <div class="for-booking">
+                      <div class="h5 per-night text-primary">150<small> / Night</small></div>
+                      <a class="btn btn-sm btn-primary">Request Room</a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-md-3 border-left">
+              <div class="sidebar-filter px-3">
+                <div class="w-100" id="sidebarBody">
+                  <h3 class="subtitle mt-3">Check Availability</h3>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group w-100">
+                        <label for="datepicker">Arrival Date</label>
+                        <div class="column">
+                          <input class="form-control form-control-sm" placeholder="dd/mm/yyyy" ng-flatpickr fp-opts="dateOpts1"
+                            ng-model="availability.date1">
+                          <span class="calender-caret"></span> </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group w-100">
+                        <label for="datepicker">Departure Date</label>
+                        <div class="column">
+                          <input class="form-control form-control-sm" placeholder="dd/mm/yyyy" ng-flatpickr fp-opts="dateOpts1"
+                            ng-model="availability.date2">
+                          <span class="calender-caret"></span> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group w-100">
+                        <label for="roomtype">Room Type</label>
+                        <select required class="form-control custom-select form-control-sm" ng-model="availability.roomtype"id="roomtype" placeholder="Please Select">
+                          <option disabled selected>Please Select</option>
+                          <option ng-repeat="item in roomType">{{item.roomname}}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group w-100">
+                        <label>Rooms</label>
+                        <div class="quantity">
+                          <input type="number" min="1" max="3" step="1" value="1" ng-model="availability.noofrooms"class="form-control form-control-sm">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                    <div class="col-lg-6">
+                      <div class="form-group w-100">
+                        <label>Adults</label>
+                        <div class="quantity">
+                          <input type="number" min="1" max="5" step="1" value="1" ng-model="availability.adult"class="form-control form-control-sm">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group w-100">
+                        <label>Children</label>
+                        <div class="quantity">
+                          <input type="number" min="1" max="5" step="1" value="1" ng-model="availability.Child"class="form-control form-control-sm">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class=" w-100" style="overflow-y: auto; height:150px ;">
+                        <label class="font-w600">Facilities</label>
+                        <label class="option d-block" ng-repeat="facilities in facility">
+                          <input name="service" value="facilities" type="checkbox">
+                          <span class="checkbox" ng-click="facilityFilter(facilities)" ng-model="availability.facility"></span> {{facilities}} </label>
+                        <!-- <label class="option d-block mt-2">
+                          <input name="service" value="motion" type="checkbox">
+                          <span class="checkbox"></span> Motion graphics </label>
+                        <label class="option d-block mt-2">
+                          <input name="service" value="videos" type="checkbox">
+                          <span class="checkbox"></span> Videography </label> -->
+                      </div>
+                    </div>
+                    <!-- <div class="col-lg-6">
+                      <label class="font-w600"> </label>
+                      <label class="option d-block">
+                        <input name="service" value="marketing" type="checkbox">
+                        <span class="checkbox"></span> Marketing </label>
+                      <label class="option d-block mt-2">
+                        <input name="service" value="motion" type="checkbox">
+                        <span class="checkbox"></span> Motion graphics </label>
+                      <label class="option d-block mt-2">
+                        <input name="service" value="videos" type="checkbox">
+                        <span class="checkbox"></span> Videography </label>
+                    </div> -->
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-lg-12">
+                      <button class="btn btn-block btn-primary" ng-click="checkAvailability();">Check Availability</button>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="roomBookingModal" class="modal fade" data-keyboard="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Room - Request</h6>
+          <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">×</span> <span class="sr-only">close</span> </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label>Check In</label>
+                    <div class="column">
+                      <input class="form-control form-control-sm" placeholder="DD/MM/YYY" ng-flatpickr fp-opts="dateOptsfrom" ng-model="roomrequest.checkin">
+                      <span class="calender-caret"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                      <label>Check Out</label>
+                      <div class="column">
+                        <input class="form-control form-control-sm"  ng-flatpickr fp-opts="dateOptsto" placeholder="DD/MM/YYY" ng-model="roomrequest.checkout" />
+                        <span class="calender-caret"></span>
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label>Guests</label>
+                    <div class="input-group">
+                      <select class="form-control form-control-sm  custom-select" ng-model="roomrequest.adult">
+                        <option>1 Adult</option>
+                        <option>2 Adult</option>
+                        <option>3 Adult</option>
+                      </select>
+                      <select class="form-control form-control-sm  custom-select"  ng-model="roomrequest.Child">
+                        <option>No Child</option>
+                        <option>1 Child</option>
+                        <option>2 Children</option>
+                        <option>3 Children</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label>Cost</label>
+                    <input class="form-control form-control-sm text-right" value="Rs 1600" readonly  ng-model="roomrequest.cost"/>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="subtitle mt-3  mb-3"> Guest Details </h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label>First Name</label>
+                    <input class="form-control form-control-sm" ng-model="roomrequest.fname"/>
+                  </div>
+                  <div class="col-md-6 form-group">
+                      <label>Last Name</label>
+                      <input class="form-control form-control-sm"ng-model="roomrequest.lname"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                      <label>Email</label>
+                      <input class="form-control form-control-sm" ng-model="roomrequest.email"/>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Phone No</label>
+                        <input class="form-control form-control-sm"ng-model="roomrequest.phone_no"/>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label>Address Line 1</label>
+                        <input class="form-control form-control-sm"ng-model="roomrequest.addrline1"/>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Address Line 2</label>
+                        <input class="form-control form-control-sm"ng-model="roomrequest.addrline2"/>
+                    </div>
+                      
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6 form-group">
+                        <label>City</label>
+                        <ui-select ng-model="roomrequest.selected.city" title="Select">
+                            <ui-select-match  placeholder="Select City">{{$select.selected}}</ui-select-match>
+                            <ui-select-choices repeat="value in city | filter: $select.search">
+                                <div ng-bind-html="value | highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>State</label>
+                           <ui-select ng-model="roomrequest.selected.state" title="Select">
+                              <ui-select-match placeholder="Select State">{{$select.selected}}</ui-select-match>
+                              <ui-select-choices repeat="value in state | filter: $select.search">
+                                  <div ng-bind-html="value | highlight: $select.search"></div>
+                              </ui-select-choices>
+                            </ui-select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Pincode</label>
+                        <input class="form-control form-control-sm"ng-model="roomrequest.pincode"/>
+                    </div>  
+                </div>
+                
+                
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click=saveRoomRequest()>Request </button>
+        </div>
+      </div>
+  </div>
+</div>
